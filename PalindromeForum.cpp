@@ -1,12 +1,18 @@
+/*
+general solution breaks the problem into smaller version of itself
+the general case must eventually be reduced to a base case.
+the base case stops the recursion
+*/
+
 #include <iostream>
 using namespace std;
 int palindrome_check(string s, int start, int end) //calling for function
 {
-    if(end - start == 1 || start == end) //if the string length = 1, return true
+    if(end - start == 1 || start == end) //if the string length = 1, return true. base case
     {
         return 1;
     }
-    else //else, compare the first and last characters, and check them
+    else //else, compare the first and last characters, and check them. general case
     {
         if (s [start] == s [end]) //if both characters are the same, then apply recursion to the remaining substrings
         {
